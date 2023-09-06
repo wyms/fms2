@@ -68,16 +68,19 @@ button:hover {
     background-color: #555;
 }
 
+/* Left-justify the table */
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
+    margin-left: 0; /* Add this rule to set the left margin to 0 */
 }
 
+/* Add borders to table cells */
 th, td {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #ccc; /* Add a 1px solid border to each table cell */
 }
 
 th {
