@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Add this script tag to the head of your HTML document -->
+    <script src="https://nominatim.openstreetmap.org/js/nominatim.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Add this line to link the stylesheet -->
+    <title>Live Stream Table</title>
+</head>
+
+<body>
+    <header>
+        <h1>Live Stream Finder</h1>
+    </header>
+
+    <main>
+        <section class="table-container">
+            <h2>Recent Live Streams</h2>
+
+            <!-- Add this input field at the top of the table -->
+            <input type="text" id="search" placeholder="Search...">
+
+            <table id="stream-table">
+                <thead>
+                    <tr>
+                        <th data-column="link">Live Stream Link</th>
+                        <th data-column="description">Description</th>
+                        <th data-column="dateTime">Date and Time</th>
+                        <th data-column="city">City</th>
+                        <th data-column="state">State</th>
+                        <!-- Move the Latitude and Longitude headers to the right -->
+                        <th data-column="latitude">Latitude</th>
+                        <th data-column="longitude">Longitude</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+            <!-- Add this button below your table -->
+            <button id="save-button">Save Changes</button>
+        </section>
+
+        <section class="form-container">
+            <form id="stream-form">
+                <label for="link">Live Stream Link:</label>
+                <input type="text" id="link" required>
+
+                <!-- Move the Description input field to the second position -->
+                <label for="description">Description (Optional):</label>
+                <input type="text" id="description">
+
+                <!-- Add input fields for city and state -->
+                <label for="city">City:</label>
+                <input type="text" id="city" required>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" required>
+
+                <!-- Add the "Use My Location" checkbox -->
+                <label for="use-my-location">Use My Location:</label>
+                <input type="checkbox" id="use-my-location">
+
+                <button type="submit">Add Stream</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
